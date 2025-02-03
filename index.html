@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alles Guete zum 16tä</title>
+    <title>Popup-Meldung</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,6 +12,7 @@
             align-items: center;
             height: 100vh;
             background-color: #f4f4f4;
+            overflow: hidden;
         }
 
         #popup {
@@ -25,6 +26,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
             text-align: center;
+            z-index: 2;
         }
 
         #popup button {
@@ -40,9 +42,34 @@
         #popup button:hover {
             background-color: #45a049;
         }
+
+        #floating-image {
+            position: absolute;
+            top: 0;
+            left: -200px;
+            width: 150px;
+            animation: floatAcross 10s linear infinite;
+            z-index: 1;
+        }
+
+        #top-image {
+            top: 0;
+        }
+
+        #bottom-image {
+            bottom: 0;
+        }
+
+        @keyframes floatAcross {
+            from { left: -200px; }
+            to { left: 100%; }
+        }
     </style>
 </head>
 <body>
+
+    <img id="top-image" class="floating-image" src="poki.png" alt="Pokemon">
+<img id="bottom-image" class="floating-image" src="poki.png" alt="Pokemon">
 
 <div id="popup">
     <p>Glückwunsch, du häschs  auch mal gschaft abzmachä.
