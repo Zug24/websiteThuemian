@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thuemian</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
+    <title>Alles Guete zum 16tä</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        #popup button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #popup button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div id="popup">
+    <p>Glückwunsch, du häschs  auch mal gschaft abzmachä.
+        Alles guäe nomol zum geburi und vill Spass mit dim Gschänk
+    </p>
+    <button onclick="redirectToWebsite()">Verstandä, zeig etz mis Gschänk</button>
+</div>
+
+<script>
+    // Popup automatisch beim Laden der Seite anzeigen
+    window.onload = function() {
+        document.getElementById('popup').style.display = 'block';
+    };
+
+    // Funktion zur Weiterleitung auf eine Webseite
+    function redirectToWebsite() {
+        window.location.href = 'https://youtu.be/dQw4w9WgXcQ?si=5q4bE1ZWiOZsrobO';
+    }
+</script>
+
+</body>
 </html>
